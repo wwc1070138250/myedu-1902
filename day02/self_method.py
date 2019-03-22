@@ -60,6 +60,20 @@ def elif_demo():
     else:
         print('else 分支')
 
+def jiafa_demo(a,b):
+    nub=0
+    if a>b:
+        for i in range(b+1,a):
+            if i%2 ==0:
+                nub = nub+i
+        print(nub)
+    else:
+        for i in range(a+1,b):
+            if i % 2 ==0:
+                nub=nub+i
+    print(nub)
+
+
 if __name__ == '__main__':
     # 将 1到50 的奇数 加起来
     nub=0
@@ -68,12 +82,14 @@ if __name__ == '__main__':
     #         nub = nub+i
     # print(nub)
 
-    for i in range(1,51):
-        if i%2 ==0:
-            nub=nub+i
-    print(nub)
+    # for i in range(1,51):
+    #     if i%2 ==0:
+    #         nub=nub+i
+    # print(nub)
 
-    for i in range(2,51,2):
-        if i%2 ==0:
-            nub=nub+i
-    print(nub)
+    # for i in range(2,51,2):
+    #     if i%2 ==0:
+    #         nub=nub+i
+    # print(nub)
+
+    jiafa_demo(22,50)
