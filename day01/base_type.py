@@ -82,8 +82,8 @@ def float_demo():
     print(type(afloat))
 
 if __name__ == '__main__':
-    str_demo3()
-    # str_demo2()
+    # str_demo3()
+    str_demo2()
     # print(str_demo1())
     # float_demo()
     # str_demo()
