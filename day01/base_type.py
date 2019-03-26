@@ -52,7 +52,8 @@ def str_demo2():
     a= 'hello '
     b= 250
     # print(a+ str(b))
-    print('a 是 : %s;b 是 : %s'%(a,b))
+    # print('a 是 : %s;b 是 : %s'%(a,b))
+    print('%s%s'%(a,b))
 
 # 去掉两头空格
 def str_demo3():
@@ -83,8 +84,10 @@ def float_demo():
 
 if __name__ == '__main__':
     # str_demo3()
-    str_demo2()
-    # print(str_demo1())
+    # str_demo2()
+    # a = str_demo1()
+    # print(a)
+    print(str_demo1())
     # float_demo()
     # str_demo()
     # int_demo()
