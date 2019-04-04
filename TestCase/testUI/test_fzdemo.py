@@ -3,7 +3,7 @@ from Common.Assert import Assertions
 import time
 import os
 from Common.baseui import baseUI
-from Common import baseui
+from Common import baseuii
 # from Common.baseuii import *
 
 class TestFirstUIDemo:
@@ -69,7 +69,41 @@ class TestFirstUIDemo:
         base.send_keys("填写促销价格","//div[contains(text(),'促销价格')]//following-sibling::div//input","998")
         # 下一步
         base.click("点击下一步","//span[contains(text(),'下一步，填写商品属性')]")
-
+        # 点击属性类型
+        base.click("点击属性类型","//label[contains(text(),'属性类型')]//following-sibling::div//input")
+        # 点击手机数码-手机通讯
+        base.click("手机数码-手机通讯","//span[contains(text(),'手机数码-手机通讯')]")
+        # 输入颜色
+        base.send_keys("输入颜色","//div[contains(text(),'颜色')]//following-sibling::div//input","五彩斑然的黑")
+        # 点击增加
+        base.click("点击增加","//span[contains(text(),'增加')]")
+        # 选择容量
+        base.click("选择容量","(//div[contains(text(),'容量')]//following-sibling::div//span)[11]")
+        # 填写屏幕尺寸
+        base.send_keys("填写屏幕尺寸","//div[contains(text(),'屏幕尺寸')]//following-sibling::div//input","6.5寸")
+        # 点击网路
+        base.click("点击网络", "//div[contains(text(),'网络')]//following-sibling::div//input")
+        # 点击4G
+        base.click("点击4G", "//span[text()='4G']")
+        # 点击系统
+        base.click("点击网络", "//div[contains(text(),'系统')]//following-sibling::div//input")
+        # 点击Android
+        base.click("点击Android", "//span[text()='Android']")
+        # 填写电池容量
+        base.send_keys("填写电池容量", "//div[contains(text(),'电池容量')]//following-sibling::div//input", "4200mAh")
+        # 切换iframe
+        iframe = driver.find_element_by_xpath("(//iframe[contains(@id,'vue-tinymce')])[1]")
+        driver.switch_to_frame(iframe)
+        # 填写规格参数
+        base.send_keys("填写规格参数","//body[@id='tinymce']"," （￣﹏￣￣）")
+        driver.switch_to_default_content()
+        # 点击下一步
         base.click("点击下一步","//span[contains(text(),'下一步，选择商品关联')]")
-
+        # 点击下一步
         base.click("点击下一步","//span[contains(text(),'完成，提交商品')]")
+
+
+    def test_demo(self,driver):
+        base = baseUI(driver)
+        driver.get("file:///C:/Users/Administrator/Desktop/demo.html")
+        base.send_keys("上传文件","//input[@typt='text']","")
