@@ -24,7 +24,7 @@ class TestFirstUIDemo:
         num = base.get_text("记录编号", "//te[2]//td[2]//div")
         order_num=base.get_text("记录订单编号","//tr[2]//td[3]//div")
         # 点击订单发货
-        base.click("点击订单发货", "(//span[text()='订单发货'])[2]")
+        base.click("点击订单发货", "//span[text()='订单发货']")
         # 点击配送方式
         base.click("点击配送方式", "//input[@placeholder='请选择物流公司']")
         # 点击顺丰快递
